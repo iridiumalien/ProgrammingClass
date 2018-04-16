@@ -4,7 +4,7 @@ public class CirclesTester {
 	public static void main(String[] args) {
 
 		Circles circle1 = new Circles();
-		Circles circle2 = new Circles(2);
+		Circles circle2 = new Circles(2, "Two");
 
 		System.out.println("Format...");
 		System.out.println("Name: radius, area, circumference,");
@@ -12,8 +12,7 @@ public class CirclesTester {
 		System.out.println();
 		
 		// Circle 1
-		System.out.print("Circle 1: " + circle1.getRadius());
-		System.out.print(", ");
+		System.out.println(circle1);
 		System.out.printf("%1$.2f", circle1.Area());
 		System.out.print(", ");
 		System.out.printf("%1$.2f", circle1.Circumf());
@@ -29,8 +28,7 @@ public class CirclesTester {
 		System.out.println();
 
 		// Circle 2
-		System.out.print("Circle 2: " + circle2.getRadius());
-		System.out.print(", ");
+		System.out.println(circle2);
 		System.out.printf("%1$.2f", circle2.Area());
 		System.out.print(", ");
 		System.out.printf("%1$.2f", circle2.Circumf());

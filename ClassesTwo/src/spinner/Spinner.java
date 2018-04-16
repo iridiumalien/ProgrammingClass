@@ -13,14 +13,7 @@ public class Spinner {
 	int diceThree = r.nextInt(6) + 1;
 
 	public Spinner() {
-		number = r.nextInt(9) + 1;
-		if ((number == 6) || (number == 7) || (number == 8)) {
-			color = "green";
-		} else if ((number == 1) || (number == 2) || (number == 3)) {
-			color = "red";
-		} else if ((number == 4) || (number == 5) || (number == 9)) {
-			color = "yellow";
-		}
+		spinIt();
 	}
 
 	public void spinIt() {
@@ -66,15 +59,15 @@ public class Spinner {
 	
 	public void cardWin(int game) {
 		if (game == 0) {
-			balance = balance * 2;
+			balance = (balance * 2) + balance;
 		} else if (game == 1) {
-			balance = balance * 4;
+			balance = (balance * 4) + balance;
 		} else if (game == 2) {
-			balance = balance * 13;
+			balance = (balance * 13) + balance;
 		} else if (game == 3) {
-			balance = balance * 52;
+			balance = (balance * 52) + balance;
 		} else {
-			balance = diceOne * 13 / 3;
+			balance = (diceOne * 13 / 3) + balance;
 		}
 	}
 
