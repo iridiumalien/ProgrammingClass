@@ -31,6 +31,30 @@ public class Circles {
 		return 2 * PI * radius;
 	}
 	
+	public double SphereVolume() {
+		return 4 * (Math.pow(radius, 3) * Math.PI) / 3;
+	}
+	
+	public double CylinderSA(int height) {
+		double r = Math.pow(radius, 2);
+		double h = Math.pow(height, 2);
+		double SA = Math.sqrt(r + h);
+		SA = SA + radius;
+		SA = SA + Math.PI * radius;
+		return SA;
+	}
+	
+	public double ConeSA(int height) {
+		double SA = 2 * Math.PI * radius * height;
+		SA = SA + (2 * this.Area());
+		return SA;
+	}
+	
+	public double SphereSA() {
+		double SA = 4 * this.Area();
+		return SA;
+	}
+	
 	public double arcLength(double degrees) {
 		double arcLength = (degrees / 360) * Circumf();
 		return arcLength;
@@ -50,7 +74,7 @@ public class Circles {
 	}
 	
 	public String toString() {
-		return "| " + name + ", " + this.radius + " |";
+		return "| " + name + ", " + this.radius + " in |";
 	}
 	
 }
